@@ -5,8 +5,8 @@ echo "..."
 cd chess_html
 ./compile
 cd ..
-
 echo "..."
+
 echo "Copy over binary files"
 cp -r chess_html/bin .
 
