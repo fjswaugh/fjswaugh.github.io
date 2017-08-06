@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Compile program"
+echo "..."
+cd chess_html
+./compile
+cd ..
+
+echo "..."
+echo "Copy over binary files"
+cp -r chess_html/bin .
+
+echo "Create symbolic links to html, js, and css files"
+rm chessboardjs img index.html
+ln -s chess_html/chessboardjs .
+ln -s chess_html/img .
+ln -s chess_html/index.html .
